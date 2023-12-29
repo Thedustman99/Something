@@ -1,23 +1,8 @@
-import random
-import string
+user_string = input("Write a sentence.      ")
+characters = user_string.split()
+print(characters[-1])
+count=0
+for words in characters[-1]:
+    count+=1
 
-def lower_case():
-    return random.choice(string.ascii_lowercase)
-def upper_case():
-    return random.choice(string.ascii_uppercase)
-def alphabets():
-    return random.choice(string.ascii_letters)
-def numbers():
-    return random.randint(0,9)
-def special_characters():
-    return random.choice(string.punctuation)
-
-functions_list = [lower_case, upper_case, alphabets, numbers, special_characters]
-
-random_function = random.choice(functions_list)
-print(random.choice(functions_list[lower_case, upper_case, alphabets, numbers, special_characters])())
-
-
-
-#print(random_function())
-
+print(f"The last word is '{characters[-1]}' with length {count}")
